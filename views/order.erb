@@ -1,0 +1,39 @@
+<form action="/shop/order" method="POST">
+
+    <input type="hidden" name="target_account_iban" value="9484984948948498"/>
+
+
+    <h2>Order summary</h2>
+
+    Product:
+    <select name="product_id">
+        <% products.each do |product| %>
+        <option value="<%= product[0] %>"><%= product[1] %></option>
+          <% end %>
+    </select>
+
+    <h2>Payment method</h2>
+
+
+    <table>
+        <tr>
+            <td>Credit card number</td>
+            <td><input type="text" name="cc_number"/></td>
+        </tr>
+        <tr>
+            <td>Owner name</td>
+            <td><input type="text" name="cc_owner"/></td>
+        </tr>
+        <tr>
+            <td>Card security number</td>
+            <td>
+                <input type="text" name="cc_csc"/>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <input type="submit" value="Order!"/>
+</form>
