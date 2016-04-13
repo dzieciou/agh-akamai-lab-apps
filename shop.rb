@@ -3,7 +3,7 @@ require 'sinatra'
 require 'rest-client'
 require 'sqlite3'
 
-set :port, 8080
+set :port, 8070
 Db = SQLite3::Database.new(':memory:')
 
 def setup_db(db)
