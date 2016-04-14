@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sqlite3'
 require 'json'
 
+set :bind, '0.0.0.0'
 set :port, 8090
 
 Db = SQLite3::Database.new(':memory:')

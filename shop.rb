@@ -3,6 +3,7 @@ require 'sinatra'
 require 'rest-client'
 require 'sqlite3'
 
+set :bind, '0.0.0.0'
 set :port, 8070
 Db = SQLite3::Database.new(':memory:')
 
